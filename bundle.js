@@ -31,9 +31,8 @@ var List = /*#__PURE__*/function () {
 
   _createClass(List, [{
     key: "add",
-    value: function add(data) {
-      this.data.push(data);
-      console.log(this.data);
+    value: function add(a) {
+      this.data.push(a);
     }
   }]);
 
@@ -48,14 +47,15 @@ var TodoList = /*#__PURE__*/function (_List) {
   function TodoList() {
     _classCallCheck(this, TodoList);
 
-    return _super.apply(this, arguments);
+    return _super.call(this);
   }
 
   return TodoList;
 }(List);
 
-var MinhaLista = new TodoList();
+var minhaLista = new TodoList();
 
 document.getElementById('novotodo').onclick = function () {
-  MinhaLista.add('Novo todo');
+  minhaLista.add('Novo todo');
+  console.log(minhaLista);
 };
